@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import testutils.TestUtils;
+
 /**
  * Page class of the Personal Information page
  *
@@ -51,7 +53,7 @@ public class PersonalInfoPage {
 	 */
 	public void updateFirstName() {
 		firstName.clear();
-		firstName.sendKeys("TestHarry");
+		firstName.sendKeys("Tester"+TestUtils.randomStringGenerator());
 		jse.executeScript("arguments[0].scrollIntoView();", oldPassword);
 		String password = new SignInPage(driver).getPassword();
 		oldPassword.sendKeys(password);

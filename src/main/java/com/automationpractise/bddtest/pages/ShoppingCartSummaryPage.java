@@ -35,6 +35,11 @@ public class ShoppingCartSummaryPage {
 	 * Method to proceed to checkout
 	 */
 	public void proceedToCheckOut() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		jse.executeScript("arguments[0].scrollIntoView();", proceedToCheckout);
 		proceedToCheckout.click();
 	}

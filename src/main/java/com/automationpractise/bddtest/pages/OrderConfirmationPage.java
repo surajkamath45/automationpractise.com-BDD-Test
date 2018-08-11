@@ -2,6 +2,7 @@ package com.automationpractise.bddtest.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,7 +18,8 @@ public class OrderConfirmationPage {
 	private WebDriver driver;
 	private WebDriverWait wait;
 
-	@FindBy(xpath= "//p[@class= 'alert alert-success']")
+	@FindAll({ @FindBy(xpath = "//p[@class= 'cheque-indent']//strong"),
+			@FindBy(xpath = "//p[@class= 'alert alert-success']") })
 	private WebElement cnfmMsg;
 
 	/**
@@ -30,16 +32,16 @@ public class OrderConfirmationPage {
 	public OrderConfirmationPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
-		wait= new WebDriverWait(this.driver, 30);
+		wait = new WebDriverWait(this.driver, 30);
 	}
 
 	/**
 	 * Method to check whether the order has been placed successfully
 	 */
 	public void checkOrderConfirmation() {
-		
+
 		wait.until(ExpectedConditions.visibilityOf(cnfmMsg));
-		String actualMessage= cnfmMsg.getText();
+		String actualMessage = cnfmMsg.getText();
 		Assert.assertEquals(actualMessage, "Your order on My Store is complete.");
 	}
 

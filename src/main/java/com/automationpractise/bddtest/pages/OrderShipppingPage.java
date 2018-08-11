@@ -40,6 +40,12 @@ public class OrderShipppingPage {
 	 * to checkout
 	 */
 	public void acceptAndProceed() {
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		jse.executeScript("arguments[0].scrollIntoView();", agreeToTerms);
 		agreeToTerms.click();
 		proceedToCheckout.click();
