@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 /**
@@ -14,7 +16,8 @@ import org.testng.Assert;
 public class PersonalInfoPage {
 
 	private WebDriver driver;
-	JavascriptExecutor jse;
+	private JavascriptExecutor jse;
+	private WebDriverWait wait;
 
 	@FindBy(css = "input#firstname")
 	private WebElement firstName;
@@ -39,6 +42,7 @@ public class PersonalInfoPage {
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
 		jse = (JavascriptExecutor) driver;
+		wait= new WebDriverWait(this.driver, 30);
 
 	}
 
@@ -59,7 +63,9 @@ public class PersonalInfoPage {
 	 * Method to check whether thee first name has been successfully updated
 	 */
 	public void checkUpdateSuccessful() {
-		Assert.assertNotNull(updateCnfmMsg);
+		wait.until(ExpectedConditions.visibilityOf(updateCnfmMsg));
+		String actualMessage= updateCnfmMsg.getText();
+		Assert.assertEquals(actualMessage, "Your personal information has been successfully updated.");
 	}
 
 }

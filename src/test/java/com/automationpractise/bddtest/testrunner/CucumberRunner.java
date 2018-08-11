@@ -13,11 +13,15 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 /**
  * 
- * @author Suraj Rajendra Kamath The Cucumber Test Runner class which is
- *         implemented using TestNGCucumberRunner. This is where the execution
- *         starts. This class reads each scenario that is available in each of
- *         the feature file in our features package and "glues" it with the
- *         StepDefinition class.
+ * @author Suraj Rajendra Kamath 
+ */
+
+/**
+ * 
+ * The Cucumber Test Runner class which is implemented using
+ * TestNGCucumberRunner. This is where the execution starts. This class reads
+ * each scenario that is available in each of the feature file in our features
+ * package and "glues" it with the StepDefinition class.
  */
 
 @CucumberOptions(features = "src//main//resources//features", glue = "com.automationpractise.bddtest.stepdef", plugin = {
@@ -35,7 +39,8 @@ public class CucumberRunner {
 	}
 
 	/**
-	 * The data provider method that supplies the Cucumber features to the test method
+	 * The data provider method that supplies the Cucumber features to the test
+	 * method
 	 * 
 	 * @return The cucumber features as CucumberFeatureWrapper after reading
 	 *         each of them from the feature files
@@ -47,7 +52,9 @@ public class CucumberRunner {
 
 	/**
 	 * The test method that executes the cucumber features.
-	 * @param cukeFeatWrapper The Cucumber Features supplied through the data provider  
+	 * 
+	 * @param cukeFeatWrapper
+	 *            The Cucumber Features supplied through the data provider
 	 */
 	@Test(dataProvider = "provider")
 	public void runCuke(CucumberFeatureWrapper cukeFeatWrapper) {

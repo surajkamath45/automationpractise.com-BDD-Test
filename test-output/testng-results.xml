@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60356" started-at="2018-08-11T13:03:26Z" finished-at="2018-08-11T13:04:27Z">
+  <suite name="Default suite" duration-ms="48612" started-at="2018-08-11T15:39:15Z" finished-at="2018-08-11T15:40:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="60356" started-at="2018-08-11T13:03:26Z" finished-at="2018-08-11T13:04:27Z">
+    <test name="Default test" duration-ms="48612" started-at="2018-08-11T15:39:15Z" finished-at="2018-08-11T15:40:04Z">
       <class name="com.automationpractise.bddtest.testrunner.CucumberRunner">
-        <test-method status="PASS" signature="setupTest()[pri:0, instance:com.automationpractise.bddtest.testrunner.CucumberRunner@194d431]" name="setupTest" is-config="true" duration-ms="1075" started-at="2018-08-11T18:33:26Z" finished-at="2018-08-11T18:33:27Z">
+        <test-method status="PASS" signature="setupTest()[pri:0, instance:com.automationpractise.bddtest.testrunner.CucumberRunner@194d431]" name="setupTest" is-config="true" duration-ms="469" started-at="2018-08-11T21:09:15Z" finished-at="2018-08-11T21:09:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupTest -->
-        <test-method status="PASS" signature="runCuke(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.automationpractise.bddtest.testrunner.CucumberRunner@194d431]" name="runCuke" duration-ms="42396" started-at="2018-08-11T18:33:28Z" data-provider="provider" finished-at="2018-08-11T18:34:10Z">
+        <test-method status="PASS" signature="runCuke(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.automationpractise.bddtest.testrunner.CucumberRunner@194d431]" name="runCuke" duration-ms="35339" started-at="2018-08-11T21:09:16Z" data-provider="provider" finished-at="2018-08-11T21:09:51Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runCuke -->
-        <test-method status="PASS" signature="runCuke(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.automationpractise.bddtest.testrunner.CucumberRunner@194d431]" name="runCuke" duration-ms="15104" started-at="2018-08-11T18:34:10Z" data-provider="provider" finished-at="2018-08-11T18:34:25Z">
+        <test-method status="PASS" signature="runCuke(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.automationpractise.bddtest.testrunner.CucumberRunner@194d431]" name="runCuke" duration-ms="11405" started-at="2018-08-11T21:09:51Z" data-provider="provider" finished-at="2018-08-11T21:10:03Z">
           <params>
             <param index="0">
               <value>
@@ -33,7 +33,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runCuke -->
-        <test-method status="PASS" signature="teardownTest()[pri:0, instance:com.automationpractise.bddtest.testrunner.CucumberRunner@194d431]" name="teardownTest" is-config="true" duration-ms="1346" started-at="2018-08-11T18:34:25Z" finished-at="2018-08-11T18:34:27Z">
+        <test-method status="PASS" signature="teardownTest()[pri:0, instance:com.automationpractise.bddtest.testrunner.CucumberRunner@194d431]" name="teardownTest" is-config="true" duration-ms="1218" started-at="2018-08-11T21:10:03Z" finished-at="2018-08-11T21:10:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownTest -->

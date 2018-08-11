@@ -5,7 +5,7 @@
     <classes>
       <class name="com.automationpractise.bddtest.testrunner.CucumberRunner">
         <methods>
-          <include name="runCuke" invocation-numbers="1"/>
+          <include name="runCuke" invocation-numbers="0"/>
           <include name="setupTest"/>
           <include name="teardownTest"/>
         </methods>
